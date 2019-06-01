@@ -16,7 +16,8 @@ app.use('/users', require('./users/user.controller'));
 
 app.use(errorHandler);
 
-const port = process.env.NODE_ENV === 'production' ? (process.nextTick.PORT || 80) : 4000;
-const server = app.listen(port, function(){
-    console.log('server listening on port: ' + port);
-})
+const port =
+  process.env.NODE_ENV === 'production' ? process.nextTick.PORT || 80 : 4000;
+const server = app.listen(port, function() {
+  console.log('server listening on port: ' + port);
+});
